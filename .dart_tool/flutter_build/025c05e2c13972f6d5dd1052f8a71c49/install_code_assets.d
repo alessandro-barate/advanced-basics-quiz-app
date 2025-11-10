@@ -1,0 +1,1 @@
+ /Users/alessandrobarate/development/flutter_projects/advanced_basics_quiz_app/.dart_tool/flutter_build/025c05e2c13972f6d5dd1052f8a71c49/native_assets.json: 
