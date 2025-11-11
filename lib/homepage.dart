@@ -9,7 +9,11 @@ class Homepage extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Image.asset('assets/images/quiz-logo.png', width: 300),
+          Image.asset(
+            'assets/images/quiz-logo.png',
+            width: 300,
+            color: const Color.fromARGB(181, 255, 255, 255),
+          ),
           const SizedBox(height: 80),
           const Text(
             'Learn Flutter the fun way!',
@@ -19,12 +23,13 @@ class Homepage extends StatelessWidget {
             ),
           ),
           SizedBox(height: 30),
-          OutlinedButton(
+          OutlinedButton.icon(
             onPressed: () {},
             style: OutlinedButton.styleFrom(
               foregroundColor: const Color.fromARGB(218, 255, 255, 255),
             ),
-            child: const Text('Start quiz'),
+            icon: Icon(Icons.arrow_circle_right_outlined, size: 20),
+            label: const Text('Start quiz'),
           ),
         ],
       ),
