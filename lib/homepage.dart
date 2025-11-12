@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:advanced_basics_quiz_app/questions_screen.dart';
 
 class Homepage extends StatelessWidget {
   const Homepage({super.key});
@@ -24,7 +25,14 @@ class Homepage extends StatelessWidget {
           ),
           SizedBox(height: 30),
           OutlinedButton.icon(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute<void>(
+                  builder: (context) => const QuestionsScreen(),
+                ),
+              );
+            },
             style: OutlinedButton.styleFrom(
               foregroundColor: const Color.fromARGB(218, 255, 255, 255),
             ),
