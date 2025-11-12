@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:advanced_basics_quiz_app/questions_screen.dart';
 
 class Homepage extends StatelessWidget {
-  const Homepage({super.key});
+  const Homepage(this.startQuiz, {super.key});
+
+  final void Function() startQuiz;
 
   @override
   Widget build(context) {
@@ -26,12 +27,7 @@ class Homepage extends StatelessWidget {
           SizedBox(height: 30),
           OutlinedButton.icon(
             onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute<void>(
-                  builder: (context) => const QuestionsScreen(),
-                ),
-              );
+              startQuiz();
             },
             style: OutlinedButton.styleFrom(
               foregroundColor: const Color.fromARGB(218, 255, 255, 255),

@@ -19,9 +19,7 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
           Text('Hello Bro!'),
           SizedBox(height: 30),
           OutlinedButton.icon(
-            onPressed: () {
-              Navigator.pop(context);
-            },
+            onPressed: () {},
             style: OutlinedButton.styleFrom(
               foregroundColor: const Color.fromARGB(218, 255, 255, 255),
             ),
