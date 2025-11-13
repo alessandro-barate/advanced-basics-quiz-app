@@ -26,9 +26,7 @@ class Homepage extends StatelessWidget {
           ),
           SizedBox(height: 30),
           OutlinedButton.icon(
-            onPressed: () {
-              startQuiz();
-            },
+            onPressed: startQuiz,
             style: OutlinedButton.styleFrom(
               foregroundColor: const Color.fromARGB(218, 255, 255, 255),
             ),

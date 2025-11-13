@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:advanced_basics_quiz_app/homepage.dart';
 
 class QuestionsScreen extends StatefulWidget {
   const QuestionsScreen({super.key});
@@ -10,6 +11,14 @@ class QuestionsScreen extends StatefulWidget {
 }
 
 class _QuestionsScreenState extends State<QuestionsScreen> {
+  dynamic activeScreen;
+
+  // void goBackScreen() {
+  //   setState(() {
+  //     activeScreen = const Homepage();
+  //   });
+  // }
+
   @override
   Widget build(context) {
     return Center(
@@ -19,7 +28,9 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
           Text('Hello Bro!'),
           SizedBox(height: 30),
           OutlinedButton.icon(
-            onPressed: () {},
+            onPressed: () {
+              // goBackScreen();
+            },
             style: OutlinedButton.styleFrom(
               foregroundColor: const Color.fromARGB(218, 255, 255, 255),
             ),
