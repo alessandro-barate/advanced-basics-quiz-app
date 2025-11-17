@@ -25,8 +25,13 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Text('Hello Bro!'),
-          SizedBox(height: 30),
+          const Text('The question...'),
+          const SizedBox(height: 30),
+          ElevatedButton(onPressed: () {}, child: Text('Answer 1')),
+          ElevatedButton(onPressed: () {}, child: Text('Answer 2')),
+          ElevatedButton(onPressed: () {}, child: Text('Answer 3')),
+          ElevatedButton(onPressed: () {}, child: Text('Answer 4')),
+
           OutlinedButton.icon(
             onPressed: () {
               // goBackScreen();
