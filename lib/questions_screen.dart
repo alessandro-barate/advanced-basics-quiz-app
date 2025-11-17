@@ -1,3 +1,4 @@
+import 'package:advanced_basics_quiz_app/answer_button.dart';
 import 'package:flutter/material.dart';
 import 'package:advanced_basics_quiz_app/homepage.dart';
 
@@ -28,11 +29,10 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
         children: [
           const Text('The question...'),
           const SizedBox(height: 30),
-          ElevatedButton(onPressed: () {}, child: Text('Answer 1')),
-          ElevatedButton(onPressed: () {}, child: Text('Answer 2')),
-          ElevatedButton(onPressed: () {}, child: Text('Answer 3')),
-          ElevatedButton(onPressed: () {}, child: Text('Answer 4')),
-
+          AnswerButton(onTap: () {}, answerText: 'Answer text...'),
+          AnswerButton('Answer text...'),
+          AnswerButton('Answer text...'),
+          AnswerButton('Answer text...'),
           OutlinedButton.icon(
             onPressed: () {
               // goBackScreen();
