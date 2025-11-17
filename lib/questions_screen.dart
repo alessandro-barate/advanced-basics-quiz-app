@@ -27,12 +27,19 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Text('The question...'),
+          const Text(
+            'The question...',
+            style: TextStyle(color: Color.fromARGB(255, 0, 0, 0), fontSize: 18),
+          ),
           const SizedBox(height: 30),
-          AnswerButton(onTap: () {}, answerText: 'Answer text...'),
-          AnswerButton('Answer text...'),
-          AnswerButton('Answer text...'),
-          AnswerButton('Answer text...'),
+          AnswerButton(onTap: () {}, answerText: 'Answer text 1...'),
+          const SizedBox(height: 10),
+          AnswerButton(onTap: () {}, answerText: 'Answer text 2...'),
+          const SizedBox(height: 10),
+          AnswerButton(onTap: () {}, answerText: 'Answer text 3...'),
+          const SizedBox(height: 10),
+          AnswerButton(onTap: () {}, answerText: 'Answer text 4...'),
+          const SizedBox(height: 30),
           OutlinedButton.icon(
             onPressed: () {
               // goBackScreen();
