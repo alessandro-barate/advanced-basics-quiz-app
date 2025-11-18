@@ -41,15 +41,10 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
               ),
             ),
           ),
-
           const SizedBox(height: 30),
-          AnswerButton(onTap: () {}, answerText: currentQuestion.answers[0]),
-          const SizedBox(height: 10),
-          AnswerButton(onTap: () {}, answerText: currentQuestion.answers[1]),
-          const SizedBox(height: 10),
-          AnswerButton(onTap: () {}, answerText: currentQuestion.answers[2]),
-          const SizedBox(height: 10),
-          AnswerButton(onTap: () {}, answerText: currentQuestion.answers[3]),
+          ...currentQuestion.answers.map((item) {
+            return AnswerButton(answerText: item, onTap: () {});
+          }),
           const SizedBox(height: 30),
           OutlinedButton.icon(
             onPressed: () {
