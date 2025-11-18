@@ -1,6 +1,6 @@
 import 'package:advanced_basics_quiz_app/answer_button.dart';
 import 'package:flutter/material.dart';
-import 'package:advanced_basics_quiz_app/homepage.dart';
+import 'package:advanced_basics_quiz_app/data/questions.dart';
 
 class QuestionsScreen extends StatefulWidget {
   const QuestionsScreen({super.key});
@@ -22,23 +22,34 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
 
   @override
   Widget build(context) {
+    final currentQuestion = questions[5];
+
     return SizedBox(
       width: double.infinity,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          const Text(
-            'The question...',
-            style: TextStyle(color: Color.fromARGB(255, 0, 0, 0), fontSize: 18),
+          SizedBox(
+            width: 350,
+            child: Text(
+              textAlign: TextAlign.center,
+              currentQuestion.text,
+              style: const TextStyle(
+                color: Color.fromARGB(255, 0, 0, 0),
+                fontSize: 18,
+              ),
+            ),
           ),
+
           const SizedBox(height: 30),
-          AnswerButton(onTap: () {}, answerText: 'Answer text 1...'),
+          AnswerButton(onTap: () {}, answerText: currentQuestion.answers[0]),
           const SizedBox(height: 10),
-          AnswerButton(onTap: () {}, answerText: 'Answer text 2...'),
+          AnswerButton(onTap: () {}, answerText: currentQuestion.answers[1]),
           const SizedBox(height: 10),
-          AnswerButton(onTap: () {}, answerText: 'Answer text 3...'),
+          AnswerButton(onTap: () {}, answerText: currentQuestion.answers[2]),
           const SizedBox(height: 10),
-          AnswerButton(onTap: () {}, answerText: 'Answer text 4...'),
+          AnswerButton(onTap: () {}, answerText: currentQuestion.answers[3]),
           const SizedBox(height: 30),
           OutlinedButton.icon(
             onPressed: () {
